@@ -1,9 +1,16 @@
+/**
+ * Nemotron: Workers AI binding by default.
+ * Optional self-host: wrangler secret put NEMOTRON_URL  (cloudflared OpenAI-compat)
+ *                     wrangler secret put NEMOTRON_TOKEN
+ * Never commit account_id or wallets.
+ */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "aifoundry-x402",
 	"main": "packages/x402-gateway/src/index.ts",
 	"compatibility_date": "2025-10-08",
 	"observability": { "enabled": true },
+	"ai": { "binding": "AI" },
 	"vars": {
 		"NETWORK": "base-sepolia",
 		"ENABLED_NETWORKS": "base,solana,polygon,arbitrum,world",
@@ -11,6 +18,7 @@
 		"SESSION_TTL_SEC": "600",
 		"BUDGET_IN": "10000",
 		"BUDGET_OUT": "10000",
+		"NEMOTRON_MODEL": "@cf/nvidia/nemotron-3-120b-a12b",
 		"USDC_BASE": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
 		"USDC_SOLANA": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
 		"USDC_POLYGON": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
