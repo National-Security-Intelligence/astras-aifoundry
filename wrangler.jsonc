@@ -1,21 +1,22 @@
-/**
- * AIFoundry.sh — Astras.ai
- * No wallet or Cloudflare account_id in git.
- * npx wrangler secret put PAY_TO
- */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "aifoundry-x402",
 	"main": "packages/x402-gateway/src/index.ts",
 	"compatibility_date": "2025-10-08",
-	"observability": {
-		"enabled": true
-	},
+	"observability": { "enabled": true },
 	"vars": {
 		"NETWORK": "base-sepolia",
+		"ENABLED_NETWORKS": "base,solana,polygon,arbitrum,world",
 		"FACILITATOR_URL": "https://x402.org/facilitator",
 		"SESSION_TTL_SEC": "600",
 		"BUDGET_IN": "10000",
-		"BUDGET_OUT": "10000"
+		"BUDGET_OUT": "10000",
+		"USDC_BASE": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+		"USDC_SOLANA": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+		"USDC_POLYGON": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+		"USDC_ARBITRUM": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+		"USDC_WORLD": "0x79A02482A880bCE3F13E09da970dC34dB4cD24D1",
+		"USDC_BASE_SEPOLIA": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+		"USDC_SOLANA_DEVNET": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"
 	}
 }
