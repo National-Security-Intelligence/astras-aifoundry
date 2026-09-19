@@ -1,6 +1,7 @@
 /**
- * AIFoundry.sh — Astras.ai brand
- * Cloudflare Worker + x402. Replace PAY_TO before any live traffic.
+ * AIFoundry.sh — Astras.ai
+ * No wallet or Cloudflare account_id in git.
+ * npx wrangler secret put PAY_TO
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
@@ -11,7 +12,6 @@
 		"enabled": true
 	},
 	"vars": {
-		"PAY_TO": "0x000000000000000000000000000000000000dEaD",
 		"NETWORK": "base-sepolia",
 		"FACILITATOR_URL": "https://x402.org/facilitator",
 		"SESSION_TTL_SEC": "600",
