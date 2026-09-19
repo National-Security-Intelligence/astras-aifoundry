@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aifoundry-x402",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-10-08",
+  "observability": { "enabled": true },
+  "vars": {
+    "PAY_TO": "0x000000000000000000000000000000000000dEaD",
+    "NETWORK": "base-sepolia",
+    "FACILITATOR_URL": "https://x402.org/facilitator",
+    "SESSION_TTL_SEC": "600",
+    "BUDGET_IN": "10000",
+    "BUDGET_OUT": "10000"
+  }
+}
